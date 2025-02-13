@@ -1,0 +1,91 @@
+.how-it-works {
+  padding: 4rem 2rem;
+  background-color: #f4f7fa; /* Light Gray Background */
+  text-align: center;
+}
+
+.how-it-works-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #2d3748; /* Darker heading color */
+}
+
+.how-it-works-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-it-works-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem; /* Increased spacing between steps */
+  width: 80%;
+  max-width: 800px;
+  position: relative; /* For the dotted line */
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition */
+}
+
+.how-it-works-step.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
+}
+
+.how-it-works-step-content {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  background-color: #fff; /* White Background */
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.how-it-works-step:hover .how-it-works-step-content {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works-step-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #7F00FF; /* Primary Purple icon color */
+}
+
+.how-it-works-step-description {
+  text-align: left;
+}
+
+/* Dotted Line (Simulated) */
+.how-it-works-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -2rem; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 2rem; /* Adjust as needed */
+  border-bottom: 2px dashed #e2e8f0; /* Dotted line */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .how-it-works-step {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+  }
+
+  .how-it-works-step-content {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .how-it-works-step:not(:last-child)::after {
+    display: none; /* Hide dotted lines on smaller screens */
+  }
+}

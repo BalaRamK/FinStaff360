@@ -1,0 +1,29 @@
+.call-to-action {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #7F00FF; /* Primary Purple background */
+  border-top: 1px solid #e2e8f0;
+  color: #fff;
+}
+
+.call-to-action-headline {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.call-to-action-cta {
+  background-color: #fff; /* White button */
+  color: #7F00FF; /* Primary Purple text color */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.call-to-action-cta:hover {
+  background-color: #bf8bff; /* Secondary Purple on hover */
+  color: #fff;
+}

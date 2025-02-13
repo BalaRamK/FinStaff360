@@ -1,0 +1,71 @@
+.hero {
+  padding: 6rem 2rem; /* Increased padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute content and image */
+  color: #333; /* Dark text color */
+  background-color: #f9fafb; /* Light Gray Background */
+}
+
+.hero-content {
+  text-align: left; /* Align text to the left */
+  max-width: 50%; /* Adjust width as needed */
+}
+
+.hero-headline {
+  font-size: 3rem; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2d3748; /* Darker heading color */
+}
+
+.hero-subheadline {
+  font-size: 1.3rem; /* Increased font size */
+  margin-bottom: 2rem;
+  color: #6b7280; /* Gray text color */
+}
+
+.hero-cta {
+  background-color: #7F00FF; /* Primary Purple button */
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-cta:hover {
+  background-color: #bf8bff; /* Secondary Purple on hover */
+  color: #fff;
+}
+
+.hero-image {
+  max-width: 40%; /* Adjust image width */
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack content and image vertically */
+    text-align: center;
+    padding: 4rem 2rem; /* Reduced padding on smaller screens */
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    max-width: 80%;
+  }
+}

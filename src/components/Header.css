@@ -1,0 +1,108 @@
+.header {
+  background-color: #fff; /* White background */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7F00FF; /* Primary Purple text color */
+  position: relative; /* For absolute positioning of the menu */
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7F00FF; /* Primary Purple logo color */
+}
+
+.header-nav {
+  position: relative; /* For the menu toggle */
+}
+
+.header-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.header-nav li {
+  margin-left: 2rem; /* Increased spacing */
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #7F00FF; /* Primary Purple link color */
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+  color: #bf8bff; /* Secondary Purple hover color */
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-login-button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #7F00FF; /* Violet background */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-login-button:hover {
+  background-color: #bf8bff; /* Lighter purple on hover */
+}
+
+.header-menu-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: #7F00FF;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header-nav ul {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .header-nav.open ul {
+    display: flex; /* Show menu when open */
+  }
+
+  .header-nav li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .header-menu-toggle {
+    display: block; /* Show the hamburger button */
+  }
+
+  .header-buttons {
+    margin-top: 1rem;
+  }
+}
